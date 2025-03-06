@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work & Education Timeline</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script>
+      function toggleMenu() {
+          var nav = document.getElementById("nav-links");
+          nav.classList.toggle("show");
+      }
+    </script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- ✅ Hamburger menu -->
+      <ul id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="work.html">Work Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="timeline-container">
+      <h1>Work & Education Timeline</h1>
+      <div class="timeline">
+        <div class="timeline-column">
+          <h2>Work Experience</h2>
+          <div class="timeline-item" data-year="2022">
+            <p><strong>Enbridge, Calgary, AB (2022 - 2024)</strong></p>
+            <p>Manager, Catalyst Program</p>
+          </div>
+          <div class="timeline-item" data-year="2020">
+            <p><strong>3-I Solution Ltd, Calgary, AB (2020 - 2022)</strong></p>
+            <p>Founder & Project Manager</p>
+          </div>
+          <div class="timeline-item" data-year="2016">
+            <p>
+              <strong
+                >3 I Solution Consulting, Casablanca, Morocco (2016 -
+                2020)</strong
+              >
+            </p>
+            <p>General Manager</p>
+          </div>
+        </div>
+        <div class="timeline-column">
+          <h2>Education</h2>
+          <div class="timeline-item" data-year="2019">
+            <p>
+              <strong>Global MBA</strong> - Durham University Business School,
+              UK (2019)
+            </p>
+          </div>
+          <div class="timeline-item" data-year="2002">
+            <p>
+              <strong>Bachelor of Computer Science</strong> - University of
+              Quebec, Montreal, QC (2002)
+            </p>
+          </div>
+          <h2>Certifications</h2>
+          <div class="timeline-item" data-year="2022">
+            <p>Approved LCS Lean Trainer (2022)</p>
+          </div>
+          <div class="timeline-item" data-year="2015">
+            <p>Project Management Professional (PMP) Certification (2015)</p>
+          </div>
+          <div class="timeline-item" data-year="2014">
+            <p>Lean Six Sigma Black Belt, IASSC (2014)</p>
+          </div>
+          <div class="timeline-item" data-year="2013">
+            <p>Lean Six Sigma Green Belt, EnCana, Calgary, AB (2013)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>&copy; 2025 Ihssane Hadi. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
