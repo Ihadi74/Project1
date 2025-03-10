@@ -4,147 +4,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Welcome to 3-I Solution Ltd</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script>
-      function synchronizeDarkMode() {
-          const switchElement = document.getElementById("darkModeSwitch");
-          if (switchElement.checked) {
-              document.documentElement.setAttribute("data-theme", "dark");
-              localStorage.setItem("theme", "dark");
-          } else {
-              document.documentElement.setAttribute("data-theme", "light");
-              localStorage.setItem("theme", "light");
-          }
-      }
-      
-      // Load saved theme preference
-      window.onload = function() {
-          const savedTheme = localStorage.getItem("theme") || "light";
-          document.documentElement.setAttribute("data-theme", savedTheme);
-          document.getElementById("darkModeSwitch").checked = (savedTheme === "dark");
-      };
-    </script>    
-    <script>
-      function toggleMenu() {
-          var nav = document.getElementById("nav-links");
-          nav.classList.toggle("show");
-      }
-    </script>
+    <link rel="stylesheet" href="styles.css" /> <script defer src="scripts.js"></script>
+   <!-- Moved JS to an external file for clarity --> 
   </head>
   <body>
+    <!-- Navbar --> 
     <header>
       <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/3i-Solution-consulting-low-size-black-.png" alt="3-I Solution Ltd Logo">
+          </a>
+        </div>
         <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- Hamburger menu -->
         <ul id="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <!-- <li><a href="work.html">Work Experience</a></li> -->
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <div class="dark-mode-toggle">
-            <label for="darkModeSwitch">Switch Mode</label>
+          <li class="dark-mode-toggle">
+            <label for="darkModeSwitch">Dark Mode</label>
             <input id="darkModeSwitch" type="checkbox" onchange="synchronizeDarkMode()"/>
-        </div>
+          </li>
         </ul>
-        
       </nav>
-      
     </header>
-    <!-- Dark Mode Toggle Switch - Moved Below Navbar -->
-    <!-- <div class="dark-mode-toggle">
-      <label for="darkModeSwitch">Switch Mode</label>
-      <input id="darkModeSwitch" type="checkbox" onchange="synchronizeDarkMode()"/>
-  </div> -->
     <main>
-      <!-- <div class="contrast-square center-content">
-        <div class="slider-container">
-            <input id="darkModeSwitch" type="checkbox" onchange="synchronizeDarkMode()"/>
-        </div>
-      </div> -->
-      
-      
-       
+     <!-- Hero Section --> 
+      <section class="hero"> 
           <h1>🚀 Welcome to 3-I Solution Ltd - Empowering Businesses with Technology & Strategy!</h1>
-        <!-- <div class="profile-section" > -->
-          <!-- <div class="profile-text"> -->
-            
           <h2>Ihssane Hadi</h2>
           <h5>Full-Stack Developer | MBA | Lean Six Sigma Black Belt | PMP | Digital Transformation Expert</h5>
-          <!-- <center><strong>Full-Stack Developer | MBA | Lean Six Sigma Black Belt | PMP | Digital Transformation Expert</strong></center> -->
-          <img id= "format-profile-image" src="/images/Ihadi-Image.jpeg" alt="Business People">
+          <img id= "format-profile-image" src="/images/Ihadi-Image.jpeg" alt="Profile Image">
           <p>🔹Bridging Business & Technology for Maximum Impact!</p>
           
           <p>With <strong>20+ years of expertise</strong> in <strong>process optimization, project management, and digital transformation</strong>, I bring a unique blend of <strong>business acumen and cutting-edge technology</strong> to help businesses scale efficiently.</p>
-        
-
-        <div class="profile-section" >
-          <div class="profile-text">
+      </section> 
+      <!-- Why Work With Me --> 
+      <section class="profile-section">
+        <div class="profile-content">
+        <div class="profile-text">
 
           <h2>💡 Why Work With Me?</h2>
 
           <p>I am a <strong>Full-Stack Developer</strong> with a strong foundation in <strong>business strategy, process improvement, and Agile methodologies</strong>. Whether you're looking to <strong>optimize your operations, build a scalable web application, or implement automation</strong>, I can help you achieve your goals.</p>
           <ul>
-            <li> <strong>Expertise in Full-Stack Development</strong> (React, Node.js, MongoDB, SQL)</li>
-            <li> <strong>Certified Project Manager (PMP) & Agile Practitioner</strong></li>
-            <li> <strong>Process Improvement using Lean Six Sigma & AI-powered automation</strong></li>
-            <li><strong>Business Strategy, Digital Transformation & Consulting</strong></li>
+            <li>✔ <strong>Expertise in Full-Stack Development</strong> (React, Node.js, MongoDB, SQL)</li>
+            <li>✔ <strong>Certified Project Manager (PMP) & Agile Practitioner</strong></li>
+            <li>✔ <strong>Process Improvement using Lean Six Sigma & AI-powered automation</strong></li>
+            <li>✔ <strong>Business Strategy, Digital Transformation & Consulting</strong></li>
           </ul>
           </div>
-          <div class="profile-image1">
+          <div class="profile-image">
             <img id= "format-image" src="/images/pexels-fauxels-3183153-306x306.jpg" alt="why work with me">
-          </div>
         </div>
-        <div class="profile-section1" >
-          <div class="profile-text">
+      </section>
+      <!-- My Services --> 
+        <section class="profile-section1" >
           <h2>🌟 My Services</h2>
-          <div class="service">
-          
+           <div class="profile-content">
+            <div class="profile-text">
           <h3>💻 Full-Stack Web Development</h3>
           <ul>
-            <li> Custom-built <strong>web applications</strong> & <strong>enterprise solutions</strong></li>
-            <li> <strong>E-commerce platforms</strong></li>
-            <li> Frontend (React, Vue, Next.js) & Backend (Node.js, Express)</li>
-            <li> Database Management (MongoDB, SQL)</li>
+            <li>✔ Custom-built <strong>web applications</strong> & <strong>enterprise solutions</strong></li>
+            <li>✔ <strong>E-commerce platforms</strong></li>
+            <li>✔ Frontend (React, Vue, Next.js) & Backend (Node.js, Express)</li>
+            <li>✔ Database Management (MongoDB, SQL)</li>
           </ul>
-          </div>
-          <div class="service">
           <h3>⚙️ Process Optimization & Automation</h3>
           <ul>
-            <li> Implementing <strong>Lean Six Sigma</strong> to reduce waste & improve efficiency</li>
-            <li> AI-driven <strong>business process automation & analytics</strong></li>
-            <li> Cloud-based <strong>workflow automation</strong> & DevOps solutions</li>
+            <li>✔ Implementing <strong>Lean Six Sigma</strong> to reduce waste & improve efficiency</li>
+            <li>✔ AI-driven <strong>business process automation & analytics</strong></li>
+            <li>✔ Cloud-based <strong>workflow automation</strong> & DevOps solutions</li>
           </ul>
-          </div>
-          <div class="service">
           <h3>📊 Project Management & Business Strategy</h3>
           <ul>
-            <li> Agile & Scrum coaching for high-performing teams</li>
-            <li> Strategic <strong>business process modeling & automation</strong></li>
-            <li> Consulting on <strong>digital transformation</strong> & technology adoption</li>
+            <li>✔ Agile & Scrum coaching for high-performing teams</li>
+            <li>✔ Strategic <strong>business process modeling & automation</strong></li>
+            <li>✔ Consulting on <strong>digital transformation</strong> & technology adoption</li>
           </ul>
           </div>
-        </div>
           <div class="profile-image">
-            <img src="/images/2149311914.jpg" alt="Business People">
+            <img src="/images/2149311914.jpg" alt="Business Collaboration">
           </div>
-        
         </div>
-        <div class="container">
-        <div class="profile-section2" >
+        </section>
+        <!-- Contact Section -->
+        <section class="profile-section2" >
           <h2>🚀 Let's Build Something Great Together!</h2>
           <p>🔹 <strong>Looking to develop a custom web application?</strong></p>
           <p>🔹 <strong>Want to streamline your operations with automation?</strong></p>
           <p>🔹 <strong>Need expert guidance in project management & process improvement?</strong></p>
-          
           <p> <strong> <a href="contact.html">📩Let's connect!</a></strong> I’d love to discuss how I can help you <strong>accelerate your business growth with technology & strategy</strong>.</p>
-        </div>
-        </div>
+        </section>
     </main>
-
     <footer>
       <p>&copy; 2025 Ihssane Hadi. All Rights Reserved.</p>
     </footer>
   </body>
 </html>
-

@@ -3,37 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact Page</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script>
-      function toggleMenu() {
-          var nav = document.getElementById("nav-links");
-          nav.classList.toggle("show");
-      }
-    </script>
+    <title>Welcome to 3-I Solution Ltd</title>
+    <link rel="stylesheet" href="styles.css" /> <script defer src="scripts.js"></script>
+   <!-- Moved JS to an external file for clarity --> 
   </head>
   <body>
-    <body>
+    <!-- Navbar --> 
+    <header>
       <nav class="navbar">
-        <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- ✅ Hamburger menu -->
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/3i-Solution-consulting-low-size-black-.png" alt="3-I Solution Ltd Logo">
+          </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- Hamburger menu -->
         <ul id="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Me</a></li>
-          <!-- <li><a href="work.html">Work Experience</a></li> -->
+          <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li class="dark-mode-toggle">
+            <label for="darkModeSwitch">Dark Mode</label>
+            <input id="darkModeSwitch" type="checkbox" onchange="synchronizeDarkMode()"/>
+          </li>
         </ul>
       </nav>
-      <div class="container">
-        <h1>Contact Us</h1>
-        <p>Feel free to reach out for any inquiries or collaborations.</p>
-        <form class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
+    </header>
+    <!-- Contact Section -->
+    <main>
+      <div class="contact-container">
+          <h1>📩 Contact Us</h1>
+          <p>Feel free to reach out for any inquiries or collaborations.</p>
+          
+          <form class="contact-form">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <input type="email" name="email" placeholder="Your Email" required>
+              <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              <button type="submit">Send Message</button>
+          </form>
       </div>
+  </main>
+
+  <footer>
+      <p>&copy; 2025 3-I Solution Ltd. All Rights Reserved.</p>
+  </footer>
     </body>
 </html>

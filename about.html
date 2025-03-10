@@ -1,38 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+  <<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me - Ihssane Hadi</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script>
-      function toggleMenu() {
-          var nav = document.getElementById("nav-links");
-          nav.classList.toggle("show");
-      }
-    </script>
+    <title>Welcome to 3-I Solution Ltd</title>
+    <link rel="stylesheet" href="styles.css" /> <script defer src="scripts.js"></script>
+   <!-- Moved JS to an external file for clarity --> 
   </head>
   <body>
-    <nav class="navbar">
-      <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- ✅ Hamburger menu -->
-      <ul id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <!-- <li><a href="work.html">Work Experience</a></li> -->
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- Navbar --> 
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/3i-Solution-consulting-low-size-black-.png" alt="3-I Solution Ltd Logo">
+          </a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- Hamburger menu -->
+        <ul id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li class="dark-mode-toggle">
+            <label for="darkModeSwitch">Dark Mode</label>
+            <input id="darkModeSwitch" type="checkbox" onchange="synchronizeDarkMode()"/>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <main>
-    <div class="container">
+    <section class=""hero">
       <h1>👋 About Me - <span class="highlight">Ihssane Hadi</span></h1>
       
-      <p>I am a <strong>trilingual international professional</strong> with expertise in <strong>Continuous Improvement, Business Process Management, and Project Management</strong>. My passion lies in <strong>optimizing processes, increasing efficiency, reducing costs, and enhancing customer satisfaction</strong>—a mindset I now bring into the world of <span class="highlight">Full-Stack Development</span>.</p>
+      <p>I am a <strong>trilingual international professional</strong> 
+        with expertise in 
+        <strong>Continuous Improvement, Business Process Management, and Project Management</strong>. 
+        My passion lies in <strong>optimizing processes, increasing efficiency, reducing costs, and enhancing customer satisfaction</strong>
+        —a mindset I now bring into the world of 
+        <span class="highlight">Full-Stack Development</span>.
+      </p>
       
       <h2>💡 Bridging Business & Technology</h2>
-      <p>Currently enrolled in a <strong>Full-Stack Development</strong> program, I see this not as a career shift but as a <strong>natural evolution</strong> of my problem-solving expertise. By combining my skills in <strong>business strategy, process automation, and technology</strong>, I empower companies to thrive in the digital age.</p>
-      
+      <p>Currently enrolled in a <strong>Full-Stack Development</strong> 
+        program, I see this not as a career shift but as a <strong>natural evolution</strong> 
+        of my problem-solving expertise. By combining my skills in <strong>
+        business strategy, process automation, and technology</strong>, 
+        I empower companies to thrive in the digital age.
+      </p>
+    </section>
+    
+    <section class="Strengths">
       <h2>🚀 My Strengths</h2>
       <ul>
         <li>✔ <strong>Agile Learner</strong>: Thrives in dynamic and fast-paced environments.</li>
@@ -40,7 +59,8 @@
         <li>✔ <strong>Leadership & Mentorship</strong>: Guides teams & individuals to success.</li>
         <li>✔ <strong>Strategic Thinker</strong>: Expert in optimizing efficiency & streamlining workflows.</li>
       </ul>
-      
+    </section>
+    <section class="education">
       <h2>🎓 My Educational Background</h2>
       <p>I hold:</p>
       <ul>
@@ -49,16 +69,23 @@
         <li>📜 <strong>PMP (Project Management Professional) Certification</strong></li>
         <li>📜 <strong>Lean Six Sigma Black Belt Certification</strong></li>
       </ul>
-      
+    </section>
+    
+    <section class="mission">
       <h2>🌟 My Mission</h2>
-      <p>As a <strong>leader, mentor, and consultant</strong>, I enjoy helping others, sharing knowledge, and simplifying complex processes to empower teams and individuals. My projects focus on delivering <strong>sustainable solutions</strong> that enhance <strong>efficiency, productivity, and business success</strong>.</p>
-      
-      <div class="cta">
+      <p>As a <strong>leader, mentor, and consultant</strong>, 
+        I enjoy helping others, sharing knowledge, and simplifying complex processes to 
+        empower teams and individuals. My projects focus on delivering 
+        <strong>sustainable solutions</strong> that enhance 
+        <strong>efficiency, productivity, and business success</strong>.
+      </p>
+    </section> 
+      <section class="cta">
         <h2>📩 Let's Connect & Collaborate!</h2>
         <p>If you're looking for an <strong>expert in Full-Stack Development, Business Strategy, or Process Improvement</strong>, let's discuss how we can work together.</p>
         <a href="contact.html">Get in Touch</a>
-      </div>
-    </div>
+      </section>
+    
     <footer>
       <p>&copy; 2025 Ihssane Hadi. All Rights Reserved.</p>
     </footer>
