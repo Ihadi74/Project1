@@ -3,7 +3,7 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 
 /* Light Mode Defaults */
@@ -46,7 +46,6 @@ body {
 }
 
 /* Section */
-
 .hero, .strengths, .education, .mission, .cta {
 
     max-width: 80%;
@@ -64,12 +63,24 @@ body {
     font-weight: bold;
 }
 
-
-
 /* Ensure text and images share space */
 .hero-text, .profile-text {
     flex: 1;
 }
+
+/* 🔹 Make Text More Readable */
+.profile-text h2, 
+.profile-text h3 {
+    font-size: 24px; /* Adjust header size for better readability */
+}
+
+.profile-text p, 
+.profile-text ul {
+    font-size: 18px; /* Improve paragraph readability */
+    line-height: 1.5; /* Add space between lines */
+}
+
+
 
 .hero-image, .profile-image {
     flex: 1;
@@ -101,14 +112,11 @@ body {
     align-items: center;
     padding: 15px 30px;
     position: relative;
-
-
-
     background: #007bff;
     color: white;
 }
 
-* 🔹 NAVIGATION LINKS (DESKTOP MODE) */
+/* * 🔹 NAVIGATION LINKS (DESKTOP MODE) */ */
 #nav-links {
     list-style: none;
     display: flex;
@@ -188,6 +196,52 @@ body {
     }
     .hamburger {
         display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: white;
+    }
+    #nav-links {
+        display: none; /* Hide menu initially */
+        flex-direction: row;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #007bff;
+        width: 100%;
+        padding: 10px 0;  /* Reduced padding*/
+        text-align:center;
+        transition: all 0.3s ease-in-out;
+    }
+
+    #nav-links.active {
+        display: flex; /* Show menu when toggled */
+        height: auto; /* Adjust height automatically */
+        padding: 5px 0; /* Reduce top and bottom padding */
+    }
+
+    #nav-links li {
+        margin: 5px 0; /* Reduce space between menu items */
+        font-size: 16px; /* Reduce font size for a compact look */
+    }
+
+    #nav-links a {
+        padding: 8px 10px; /* Reduce link padding */
+        display: block;
+    }
+
+    /* Hide the "About" (2nd item) and "Blog" (5th item) menu links in mobile view */
+    #nav-links li:nth-child(2),
+    #nav-links li:nth-child(3), 
+    #nav-links li:nth-child(4) { 
+        display: none; 
+    }
+
+    /* Hide specific images on mobile */
+    #pexels-image, /* Assuming it has an ID */
+    #business-image, /* Assuming it has an ID */
+    .pexels-image-class, /* If it has a class */
+    .business-image-class { /* If it has a class */
+        display: none;
     }
 }
 
@@ -367,12 +421,7 @@ a, button {
     margin: 0;
     color: #085fda;
   }
-/* .highlight {
-    background: #085fda;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-  } */
+
   /* List Styling */
 ul {
     list-style-type: none;

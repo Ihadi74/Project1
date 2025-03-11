@@ -25,3 +25,24 @@ function toggleMenu() {
     const nav = document.getElementById("nav-links");
     nav.classList.toggle("show");
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.querySelector(".hamburger");
+    const navLinks = document.querySelector("#nav-links");
+
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", function () {
+            navLinks.classList.toggle("active");
+        });
+
+        // Close menu when clicking on a menu item (for better UX)
+        document.querySelectorAll("#nav-links li a").forEach(link => {
+            link.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+            });
+        });
+    } else {
+        console.error("Navbar elements not found! Check your HTML structure.");
+    }
+});
+
