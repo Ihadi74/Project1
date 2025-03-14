@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - 3-I Solution Ltd</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Welcome to 3-I Solution Ltd</title>
+        <link rel="stylesheet" href="styles.css" /> <script defer src="scripts.js"></script>
+       <!-- Moved JS to an external file for clarity --> 
+      </head>
+      <body>
+        <!-- Navbar --> 
+        <header>
+          <nav class="navbar">
             <div class="logo">
-                <a href="index.html">
-                    <img src="images/3i-Solution-consulting-low-size-black-.png" alt="3-I Solution Ltd Logo">
-                </a>
+              <a href="index.html">
+                <img src="images/3i-Solution-consulting-low-size-black-.png" alt="3-I Solution Ltd Logo">
+              </a>
             </div>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+            <div class="hamburger" onclick="toggleMenu()">☰</div> <!-- Hamburger menu -->
+            <ul id="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li class="dark-mode-toggle">
+                <label for="darkModeSwitch">Dark Mode</label>
+                <input id="darkModeSwitch" type="checkbox" onchange="synchronizeDarkMode()"/>
+              </li>
             </ul>
-        </nav>
-    </header>
-
+          </nav>
+        </header>
     <main>
         <section class="blog-container">
             <h1>📝 My Blog</h1>
