@@ -46,3 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
+function changeButtonColor(button, hoverColor, originalColor) {
+    button.addEventListener("mouseover", function() {
+        button.style.backgroundColor = hoverColor;
+    });
+
+    button.addEventListener("mouseout", function() {
+        button.style.backgroundColor = originalColor;
+    });
+}
+
+// Example usage:
+document.addEventListener("DOMContentLoaded", function() {
+    const myButton = document.getElementById("myButton");
+    changeButtonColor(myButton, "lightbleu", "blue"); // Change to red on hover, revert to blue
+});
